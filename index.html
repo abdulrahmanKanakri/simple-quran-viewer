@@ -7,8 +7,10 @@
     <title>Quran Viewer</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/css/main.css"> -->
-    <link rel="stylesheet" href="/css/main.min.css">
+    <!-- <link rel="stylesheet" href="/css/main.min.css"> -->
+    <style>
+      *{padding:0;margin:0;box-sizing:border-box}html{font-family:Tajawal,sans-serif}.wrapper{max-width:720px;margin:auto;padding:0 12px}.wrapper .header{margin-bottom:16px}.wrapper .header .title{text-align:center;margin-bottom:16px}.wrapper .header .navigation{display:flex;justify-content:space-between}.wrapper .body .img-wrapper{text-align:center;width:fit-content;margin:auto}.wrapper .body .img-wrapper img{width:100%}
+    </style>
   </head>
   <body>
 
@@ -34,7 +36,9 @@
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
-    <!-- <script src="js/index.js"></script> -->
-    <script src="js/index.min.js"></script>
+    <!-- <script src="js/index.min.js"></script> -->
+    <script type="text/javascript">
+      const app={data:()=>({pageCounter:1,minPage:1,maxPage:604}),methods:{nextPage(){this.pageCounter++},prevPage(){this.pageCounter--},pad(e,t){var a="000000000"+e;return a.substr(a.length-t)}},computed:{getPageCounter(){return this.pageCounter},loadCurrentPage(){return`https://www.daily-quran.com/static/pages/page-${this.pad(this.pageCounter,3)}.jpg`}}};Vue.createApp(app).mount("#app");
+    </script>
   </body>
 </html>
