@@ -16,6 +16,12 @@ const app = {
     pad(n, size) {
       var s = "000000000" + n;
       return s.substr(s.length - size);
+    },
+    updatePageCounter(e) {
+      const value = e.target.value;
+      if(value <= this.maxPage && value >= this.minPage) {
+        this.pageCounter = value;
+      }
     }
   },
   computed: {

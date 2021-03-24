@@ -18,6 +18,15 @@ html {
   text-align: center;
   margin-bottom: 16px;
 }
+.wrapper .header .form-group {
+  margin-bottom: 16px;
+  text-align: center;
+}
+.wrapper .header .form-group #pager {
+  margin-left: 8px;
+  min-width: 100px;
+  outline: none;
+}
 .wrapper .header .navigation {
   display: flex;
   justify-content: space-between;
