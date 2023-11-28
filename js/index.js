@@ -26,7 +26,7 @@ const app = {
     },
     loadCurrentPage() {
       const page_id = Number(this.pageCounter).toString().padStart(3, "0");
-      return `https://www.daily-quran.com/static/pages/pngs/page-${page_id}.jpg`;
+      return `https://www.daily-quran.com/static/pages/pngs/page-${page_id}.png`;
     },
   },
 };
