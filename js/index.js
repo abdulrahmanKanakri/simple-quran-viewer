@@ -13,10 +13,6 @@ const app = {
     prevPage() {
       this.pageCounter--;
     },
-    pad(n, size) {
-      var s = "000000000" + n;
-      return s.substr(s.length - size);
-    },
     updatePageCounter(e) {
       const value = e.target.value;
       if(value <= this.maxPage && value >= this.minPage) {
@@ -29,8 +25,8 @@ const app = {
       return this.pageCounter;
     },
     loadCurrentPage() {
-      const page_id = this.pad(this.pageCounter, 3);
-      return `https://www.daily-quran.com/static/pages/page-${page_id}.jpg`;
+      const page_id = Number(this.pageCounter).toString().pad(3, "0");
+      return `https://www.daily-quran.com/static/pages/pngs/page-${page_id}.jpg`;
     },
   },
 };
